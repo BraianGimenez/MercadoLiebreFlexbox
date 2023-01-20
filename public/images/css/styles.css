@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root {
+    /* Variables de Colores */
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a; 
+    /* Fuentes */
+    --roboto: "roboto", sans-serif;
+    /* Tamaños Tipograficos */
+    --cuerpo-texto: 12px;
+    --titulos: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+    --parrafos: 14px;
+}
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color : black;
+    text-decoration: none;
+}
+p{
+    font-size:var(--parrafos);
+    font-weight: bold;
+}
+body{
+    font-family: var(--roboto);
+    background-color: var(--gris-claro);
+}
+.precio{
+    display: flex;
+    width: 50%;
+}
+p.descuento{
+    width: 50%;
+}
+main.home__productos section.seccion__productos article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    }
+
+/* Secciones */
+/* HEADER */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--amarillo);
+    padding: 15px 0;
+    justify-content: flex-start;
+}
+header div.logo {
+    width: 50%;
+    max-width: 200px;
+}
+header div.busqueda{
+    width: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    max-width: 200px;
+}
+button.contenedor-icono{
+position: absolute;
+top: 0;
+right: 0;
+}
+div.contenedor-titulo--noticia{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header p{
+  
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.lista-superior{
+    margin-bottom: 15px;
+    display: none;
+}
+.lista-inferior{
+    display: none;
+}
+
+header nav ul li a {
+    font-size: var(--parrafos);
+}
+header div.burger-menu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--celeste);
+    border-radius: 5px;
+    color :white;
+    width: 25px;
+    padding: 7px;
+    margin:25px auto 0 ;
+}
+    /* Secciones */
+   
+    main {
+        width: 90%;
+        margin: auto;
+  
+    }
+    .contenedor-titulo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    main section.seccion__productos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+    }
+    
+    .seccion__productos--tarjeta{
+        width: 100%;
+        max-width:280px;
+        margin: 20px 0px 10px;
+        
+    }
+
+    main section article i{
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px;
+        }
+
+
+    /* Productos */  
+ 
+    div.contenedor--precio {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        border-top: 1px solid #ebebeb;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+    
+    }
+    
+    article i.fa-sharp{
+        color: var(--verde);
+        border: 1px var(--verde) solid;
+    }
+    article div p{
+        width: 30%;
+        flex-grow: 1;
+    }
+    article p.descuento {
+        color: var(--verde);
+        margin-bottom:30px ;
+    }
+    article div h5{
+        display: flex;
+        flex-direction: column;
+    }
+/* Footer */
+footer{
+    padding:50px 10px 10px;
+    background-color: white;
+}
+footer article{
+    text-align: center;
+    margin-bottom: 50px ;
+}
+footer article i {
+    font-size: 2em;
+    color: var(--celeste);
+    margin-bottom: 10px;
+}
+footer article h4 {
+    font-size: var(--precio);
+}
+footer span {
+    font-size: var(--parrafos);
+}
+
+/* media querie */
+
+
+@media(min-width: 361px){
+ .lista-superior{
+        margin-bottom: 15px;
+        display: block;
+    }
+.lista-inferior{
+        display: block;
+    }
+    main article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    header div.burger-menu{
+        display: none;
+    }
+}
+@media(min-width: 769px){
+    header{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+    nav.lista1,
+    nav.lista2{
+        width: 50%;
+        max-width: 500px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    nav.lista1 ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+        max-width: 500px;
+    }
+    nav.lista2 ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+        max-width: 500px;
+    }
+    nav.lista2 ul.lista-inferior li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+        max-width: 500px;
+    }
+    header nav.lista1 ul.lista-superior li a{
+        display: flex;
+        width: 100%;
+        justify-content: space-around; 
+        
+        
+    }
+    header nav.lista2 ul.lista-inferior{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        
+    }
+    header nav.lista1 ul.lista-superior{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        
+    }
+    header nav.lista1 ul.lista-superior li {
+        display: flex;
+        width: 50%;
+       
+
+    }
+
+header div.logo{
+    max-width: 400px;
+}
+header div.busqueda {
+    width: 300px;
+}
+
+    div.contenedor-titulo--noticia{
+        max-width: 410px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main section.seccion__productos {
+      
+        justify-content: space-evenly;
+    }
+
+    
+    header nav ul.lista-superior{
+        margin-bottom: 15px;
+        display:block;
+    }
+    header nav ul.lista-inferior{
+        display: block;
+    }
+    main article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    header div.burger-menu{
+        display:none;
+    }
+
+@media(min-width: 1024px){
+    .seccion__productos--tarjeta {
+    max-width: 220px;  
+}
+p.descuento{
+    width: 0;
+}
+}
+
+}
